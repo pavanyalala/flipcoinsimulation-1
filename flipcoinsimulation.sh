@@ -18,3 +18,13 @@ coin_flip()
         fi
         loop=$((loop+1))
 }
+
+check_diff()
+{
+	if [ $Head -gt $Tail ]
+	then
+		diff=$((Head-Tail))
+	else
+		diff=$((Tail-Head))
+	fi
+}
