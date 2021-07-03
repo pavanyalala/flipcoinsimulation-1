@@ -36,3 +36,36 @@ print()
    echo "Total Tail Wins out of $loop is $Tail"
    echo "Total Head Wins out of $loop is $Head"
 }
+
+while (( $Head < $flip && $Tail < $flip ))
+do
+        coin_flip
+done
+if [ $Head -gt $Tail ]
+then
+	echo "Head Winner "
+	print
+elif [ $Head -lt $Tail ]
+then
+	echo "Tail Winner "
+	print
+else
+	echo "Tie game"
+	print
+	while (($diff<=2))
+	do
+		coin_flip
+		check_diff
+	done
+	echo "if while done"
+	if [ $Head -gt $Tail ]
+	then
+	        echo "Head Winner "
+	        print
+	elif [ $Head -lt $Tail ]
+	then
+        	echo "Tail Winner "
+        	print
+	fi
+
+fi
