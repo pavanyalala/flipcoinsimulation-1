@@ -28,3 +28,11 @@ check_diff()
 		diff=$((Tail-Head))
 	fi
 }
+
+print()
+{
+	check_diff
+	echo "difference between Head and Tail is $diff"
+   echo "Total Tail Wins out of $loop is $Tail"
+   echo "Total Head Wins out of $loop is $Head"
+}
